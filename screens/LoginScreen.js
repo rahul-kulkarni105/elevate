@@ -13,21 +13,13 @@ import NavImage from '../components/NavImage';
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    fontSize: 16,
-    flexDirection: 'column',
+    // flex: 1,
+    // // fontSize: 16,
+    // flexDirection: 'column',
+    // height: 180,
     // justifyContent: 'center',
     // alignItems: 'center',
-  },
-  center: {
-    textAlign: 'center'
-  },
-  titleWrapper: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 10,
+    display: 'flex',
   },
   title: {
     // marginTop: 20,
@@ -89,32 +81,14 @@ export default class LoginScreen extends React.Component {
       <View style={styles.screen}>
         <NavImage />
 
-        <View style={styles.titleWrapper}>
+        <View style={styles.textInputWrapper}>
           <Text style={styles.title}>For Your Security...</Text>
           <Text style={styles.subTitle}>Just give us a few details and we will get you started.</Text>
-        </View>
-
-        <View style={styles.textInputWrapper}>
           <TextInput style={styles.textInput} placeholder='Your SSN' />
           <TextInput style={styles.textInput} placeholder='First Name' />
           <TextInput style={styles.textInput} placeholder='Last Name' />
           <TextInput style={styles.textInput} placeholder='Date of Birth' />
         </View>
-
-          {/* <Button title='Secure Log In'
-            onPress={this._handleLoginButtonPress}
-            style={styles.loginButton} />
-
-        <Text style={styles.center}>Forgot
-          <Text style={styles.linkText}
-            onPress={() => navigate()}>
-            username
-          </Text> or
-          <Text style={styles.linkText}
-            onPress={() => navigate()}>
-            password
-          </Text>
-        </Text> */}
 
         <Text
           style={styles.linkText}
