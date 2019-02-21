@@ -62,10 +62,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'darkblue',
     borderRadius: 12
   },
-  linkText: {
-    color: 'blue',
-    textDecorationLine: 'underline',
-    textAlign: 'center'
+  continueButtonWrapper: {
+    marginRight:40,
+    marginLeft:40,
+    marginTop:10,
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#001871',
+    borderRadius:32,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  continueButton: {
+    // textDecorationLine: 'underline',
+    // textAlign: 'center',
+    // height: 56,
+    // width: 285,
+    // borderRadius: 32.5,
+    // backgroundColor: '#001871',
+    color:'#fff',
+    textAlign:'center',
   },
 });
 
@@ -101,12 +117,14 @@ export default class LoginScreen extends React.Component {
           /> */}
         </View>
 
-        <Text
-          style={styles.linkText}
-          onPress={() => navigate('PlanFinder')}
-        >
-          Continue
-        </Text>
+        <View style={styles.continueButtonWrapper}>
+          <Text
+            style={styles.continueButton}
+            onPress={() => navigate('PlanFinder')}
+          >
+            Continue
+          </Text>
+        </View>
 
         <View style={styles.imageSection}>
           {/* <Image source /> */}
