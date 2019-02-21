@@ -7,14 +7,8 @@ import PlanFinderScreen from '../screens/PlanFinderScreen';
 export default createAppContainer(createStackNavigator({
   Login: {
     screen: LoginScreen,
-    navigationOptions: () => ({
-      title: 'Login',
-    })
   },
-  PlanFinderScreen: {
+  PlanFinder: {
     screen: PlanFinderScreen,
-    navigationOptions: () => ({
-      title: 'PlanFinder',
-    })
   }
 }));

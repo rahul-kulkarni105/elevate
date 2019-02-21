@@ -2,11 +2,10 @@ import React from 'react';
 import {
     View,
     Image,
-    Picker,
     Text,
     StyleSheet
 } from 'react-native';
-import TopNavBar from '../components/TopNavBar';
+// import TopNavBar from '../components/TopNavBar';
 
 
 export default class PlanFinderScreen extends React.Component {
@@ -15,7 +14,8 @@ export default class PlanFinderScreen extends React.Component {
 
         return (
             <View style={style}>
-                <TopNavBar />
+                {/* <TopNavBar /> */}
+                something to show
             </View>
         )
     }

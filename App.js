@@ -3,7 +3,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
 // import Amplify from 'aws-amplify';
-// import amplify from './YOUR-PATH-TO/aws-exports';
+// import amplify from './aws-exports';
 
 // Amplify.configure(amplify);
 
@@ -24,7 +24,7 @@ export default class App extends React.Component {
     } else {
       return (
         <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+          { Platform.OS === 'ios' && <StatusBar barStyle="default" /> }
           <AppNavigator />
         </View>
       );
@@ -36,6 +36,7 @@ export default class App extends React.Component {
       Asset.loadAsync([
         require('./assets/images/robot-dev.png'),
         require('./assets/images/robot-prod.png'),
+        require('./assets/images/logo.png'),
       ]),
       Font.loadAsync({
         // This is the font that we are using for our tab bar

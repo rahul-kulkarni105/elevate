@@ -1,28 +1,27 @@
 
 import React, { Component } from 'react';
 import {
-  // AppRegistry,
   Image,
+  StyleSheet,
 } from 'react-native';
 
 const remote = 'https://goo.gl/images/287n9L';
 
+const styles = StyleSheet.create({
+  navBarImage: {
+    height: 175,
+    width: 375,
+    resizeMode: 'contain',
+  }
+});
+
 export default class NavImage extends Component {
   render() {
-    const resizeMode = 'center';
 
     return (
-      <Image
-        style={{
-          flex: 1,
-          height: 43,
-          width: 251,
-          resizeMode,
-        }}
-        source={{ uri: remote }}
+      <Image style={styles.navBarImage}
+        source={require('../assets/images/navBar.png')}
       />
     );
   }
 }
-
-// AppRegistry.registerComponent('BackgroundImage', () => BackgroundImage);

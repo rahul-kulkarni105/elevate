@@ -1,14 +1,23 @@
 import React from 'react';
-import { Button, Image, Text, TextInput, View, StyleSheet, navigate } from 'react-native';
+import {
+  Button,
+  Image,
+  Text,
+  TextInput,
+  View,
+  StyleSheet,
+  navigate,
+} from 'react-native';
 // import TopNavBar from '../components/TopNavBar';
+import NavImage from '../components/NavImage';
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
     fontSize: 16,
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   center: {
     textAlign: 'center'
@@ -18,17 +27,17 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 30,
+    height: 10,
   },
   title: {
-    marginTop: 20,
+    // marginTop: 20,
     color: 'darkblue',
     textAlign: 'center',
     // height: 40,
     width: 375,
     fontSize: 28,
     fontWeight: 'bold',
-    lineHeight: 40,
+    lineHeight: 30,
   },
   subTitle: {
     textAlign: 'center',
@@ -40,10 +49,11 @@ const styles = StyleSheet.create({
     lineHeight: 26,
   },
   textInputWrapper: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    // height: 30,
     marginBottom: 20,
   },
   textInput: {
@@ -64,12 +74,6 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     textAlign: 'center'
   },
-  navbar: {
-    flex: 1,
-    height: 20,
-    // flexDirection: 'row',
-    // justifyContent: 'space-evenly'
-  }
 });
 
 export default class LoginScreen extends React.Component {
@@ -83,10 +87,10 @@ export default class LoginScreen extends React.Component {
 
     return (
       <View style={styles.screen}>
-        {/* <TopNavBar style={styles.navbar} /> */}
+        <NavImage />
 
         <View style={styles.titleWrapper}>
-          <Text style={styles.title}>For your Security...</Text>
+          <Text style={styles.title}>For Your Security...</Text>
           <Text style={styles.subTitle}>Just give us a few details and we will get you started.</Text>
         </View>
 
@@ -114,7 +118,8 @@ export default class LoginScreen extends React.Component {
 
         <Text
           style={styles.linkText}
-          onPress={() => navigate('PlanFinder')}>
+          onPress={() => navigate('PlanFinder')}
+        >
           Continue
         </Text>
 

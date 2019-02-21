@@ -6,7 +6,7 @@ import {
 	Text,
 	StyleSheet
 } from 'react-native';
-// import NavImage from '../components/NavImage';
+import NavImage from '../components/NavImage';
 
 const defaultState = {
 	selectedOptions: 'Test'
@@ -16,7 +16,7 @@ const styles = {
 	branTitle: {
 		// color: 'rgba(0,0.09,0.44,1)',
 		textAlign: 'left',
-		backgroundColor: 'black',
+		backgroundColor: 'white',
 		color: 'darkblue',
 		lineHeight: 30,
 		fontSize: 18,
@@ -57,7 +57,7 @@ export default class TopNavBar extends React.Component {
 		return (
 			<View style={style.NavBar}>
 				{/* <Image source={} /> */}
-				{/* <NavImage /> */}
+				<NavImage />
 				<Text style={styles.branTitle}>AIG Retirement Services</Text>
 				<View
 					style={styles.picker}
