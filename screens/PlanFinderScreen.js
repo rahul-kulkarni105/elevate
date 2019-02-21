@@ -15,7 +15,7 @@ export default class PlanFinderScreen extends React.Component {
         return (
             <View style={style}>
                 {/* <TopNavBar /> */}
-                something to show
+                <Text>something to show</Text>
             </View>
         )
     }

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 // import TopNavBar from '../components/TopNavBar';
 import NavImage from '../components/NavImage';
+import TextInput2 from '../components/TextInput2';
 
 const styles = StyleSheet.create({
   screen: {
@@ -69,6 +70,11 @@ const styles = StyleSheet.create({
 });
 
 export default class LoginScreen extends React.Component {
+
+  state = {
+    dateOfBirth: 'Date of Birth',
+  }
+
   _handleLoginButtonPress(event) {
       // TODO: Authenticate user
       // TODO: Handle valid or invalid authentiation correctly
@@ -88,6 +94,11 @@ export default class LoginScreen extends React.Component {
           <TextInput style={styles.textInput} placeholder='First Name' />
           <TextInput style={styles.textInput} placeholder='Last Name' />
           <TextInput style={styles.textInput} placeholder='Date of Birth' />
+          {/* <TextInput2
+            text={this.state.dateOfBirth}
+            placeholderStyle={{ fontFamily: "AnotherFont", borderColor: 'red' }}
+            placeholderStyle={{ fontFamily: "AnotherFont", borderColor: 'red' }}
+          /> */}
         </View>
 
         <Text
