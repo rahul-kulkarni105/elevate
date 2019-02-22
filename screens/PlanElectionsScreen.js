@@ -82,37 +82,37 @@ const styles = StyleSheet.create({
 		lineHeight: 23,
 		textAlign: 'center',
 		marginTop: 50,
-	}
+  }
 })
 
-export default class PlanFinderScreen extends React.Component {
-	render() {
-		const { style } = this.props;
-		const { navigate } = this.props.navigation;
+export default class PlanElectionsScreen extends React.Component {
+  render() {
+    const { style } = this.props;
+    const { navigate } = this.props.navigation;
 
 		return (
 			<View style={styles.screen}>
 				<NavImage />
 
 				<View style={styles.textInputWrapper}>
-					<Text style={styles.title}>Great Work.</Text>
-					<Text style={styles.subTitle}>Next Let's Set Up Your Account Elections</Text>
+					<Text style={styles.title}>Copy Plan Elections?</Text>
+					<Text style={styles.subTitle}>Would you like to copy your plan Elections from your current plan to your new plan?</Text>
 				</View>
 
 				<View style={styles.continueButtonWrapper}>
 					<Text
 						style={styles.continueButton}
-						onPress={() => navigate('PlanElections')}
+						onPress={() => navigate('PlanCopiedConfirmation')}
 					>
-						CONTINUE
+						COPY
 					</Text>
 				</View>
 				<View style={styles.cancelButtonWrapper}>
 					<Text
 						style={styles.cancelButton}
-						onPress={() => navigate('Login')}
+						onPress={() => navigate('PlanFinder')}
 					>
-						CANCEL
+						NO THANKS
 					</Text>
 				</View>
 				<View style={styles.textInputWrapper}>
@@ -125,5 +125,5 @@ export default class PlanFinderScreen extends React.Component {
 				</View>
 			</View >
 		);
-	}
+  }
 }

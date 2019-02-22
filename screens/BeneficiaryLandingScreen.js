@@ -28,11 +28,12 @@ const styles = StyleSheet.create({
   subTitle: {
     textAlign: 'center',
     width: 320,
-    color: '#001871',
-    fontSize: 28,
-    fontWeight: 'bold',
-		lineHeight: 30,
-		marginTop: 20,
+    marginTop: 20,
+    color: '#434344',
+    fontSize: 18,
+    fontWeight: '300',
+    letterSpacing: -0.19,
+    lineHeight: 23,
 	},
   continueButtonWrapper: {
     marginRight: 40,
@@ -82,35 +83,42 @@ const styles = StyleSheet.create({
 		lineHeight: 23,
 		textAlign: 'center',
 		marginTop: 50,
-	}
+  },
+  beniGroupPlanImage: {
+    width: 375,
+    resizeMode: 'contain',
+  }
 })
 
-export default class PlanFinderScreen extends React.Component {
-	render() {
-		const { style } = this.props;
-		const { navigate } = this.props.navigation;
+export default class BeneficiaryLandingScreen extends React.Component {
+  render() {
+    const { style } = this.props;
+    const { navigate } = this.props.navigation;
 
 		return (
 			<View style={styles.screen}>
 				<NavImage />
 
 				<View style={styles.textInputWrapper}>
-					<Text style={styles.title}>Great Work.</Text>
-					<Text style={styles.subTitle}>Next Let's Set Up Your Account Elections</Text>
+					<Text style={styles.title}>Beneficiaries</Text>
+					<Text style={styles.subTitle}>You don't have any beneficiaries designated to this plan yet. It's important to designate beneficiaries to make sure your assets get passed to the right recipient. Start by creating your first profile.</Text>
+          <Image style={styles.beniGroupPlanImage}
+            source={require('../assets/images/beniGroupPlan.png')}
+          />
 				</View>
 
 				<View style={styles.continueButtonWrapper}>
 					<Text
 						style={styles.continueButton}
-						onPress={() => navigate('PlanElections')}
+						onPress={() => navigate('AddBeneficiary')}
 					>
-						CONTINUE
+						ADD A BENEFICIARY
 					</Text>
 				</View>
 				<View style={styles.cancelButtonWrapper}>
 					<Text
 						style={styles.cancelButton}
-						onPress={() => navigate('Login')}
+						onPress={() => navigate('PlanElections')}
 					>
 						CANCEL
 					</Text>
@@ -125,5 +133,5 @@ export default class PlanFinderScreen extends React.Component {
 				</View>
 			</View >
 		);
-	}
+  }
 }

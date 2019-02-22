@@ -17,19 +17,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
 	},
-	title: {
-    color: '#009CA6',
-    textAlign: 'center',
-    width: 375,
-    fontSize: 28,
-    fontWeight: 'bold',
-    lineHeight: 30,
-  },
   subTitle: {
     textAlign: 'center',
     width: 320,
     color: '#001871',
-    fontSize: 28,
+    fontSize: 14,
     fontWeight: 'bold',
 		lineHeight: 30,
 		marginTop: 20,
@@ -82,35 +74,25 @@ const styles = StyleSheet.create({
 		lineHeight: 23,
 		textAlign: 'center',
 		marginTop: 50,
-	}
+  }
 })
 
-export default class PlanFinderScreen extends React.Component {
-	render() {
-		const { style } = this.props;
-		const { navigate } = this.props.navigation;
+export default class AddBeneficiaryScreen extends React.Component {
+  render() {
+    const { style } = this.props;
+    const { navigate } = this.props.navigation;
 
-		return (
-			<View style={styles.screen}>
-				<NavImage />
+    return (
+      <View style={styles.screen}>
+        <NavImage />
 
-				<View style={styles.textInputWrapper}>
-					<Text style={styles.title}>Great Work.</Text>
-					<Text style={styles.subTitle}>Next Let's Set Up Your Account Elections</Text>
-				</View>
-
-				<View style={styles.continueButtonWrapper}>
-					<Text
-						style={styles.continueButton}
-						onPress={() => navigate('PlanElections')}
-					>
-						CONTINUE
-					</Text>
-				</View>
+        <View style={styles.textInputWrapper}>
+          <Text style={styles.subTitle}>Page Under Construction..</Text>
+        </View>
 				<View style={styles.cancelButtonWrapper}>
 					<Text
 						style={styles.cancelButton}
-						onPress={() => navigate('Login')}
+						onPress={() => navigate('BeneficiaryLanding')}
 					>
 						CANCEL
 					</Text>
@@ -123,7 +105,7 @@ export default class PlanFinderScreen extends React.Component {
 							Skip for now
 						</Text>
 				</View>
-			</View >
-		);
-	}
+      </View>
+    )
+  }
 }

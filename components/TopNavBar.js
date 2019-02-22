@@ -14,7 +14,6 @@ const defaultState = {
 
 const styles = {
 	branTitle: {
-		// color: 'rgba(0,0.09,0.44,1)',
 		textAlign: 'left',
 		backgroundColor: 'white',
 		color: 'darkblue',
@@ -56,7 +55,6 @@ export default class TopNavBar extends React.Component {
 
 		return (
 			<View style={style.NavBar}>
-				{/* <Image source={} /> */}
 				<NavImage />
 				<Text style={styles.branTitle}>AIG Retirement Services</Text>
 				<View

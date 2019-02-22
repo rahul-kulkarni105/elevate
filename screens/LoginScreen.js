@@ -8,25 +8,16 @@ import {
   StyleSheet,
   navigate,
 } from 'react-native';
-// import TopNavBar from '../components/TopNavBar';
 import NavImage from '../components/NavImage';
 import TextInput2 from '../components/TextInput2';
 
 const styles = StyleSheet.create({
   screen: {
-    // flex: 1,
-    // // fontSize: 16,
-    // flexDirection: 'column',
-    // height: 180,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     display: 'flex',
   },
   title: {
-    // marginTop: 20,
     color: 'darkblue',
     textAlign: 'center',
-    // height: 40,
     width: 375,
     fontSize: 28,
     fontWeight: 'bold',
@@ -34,7 +25,6 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     textAlign: 'center',
-    // height: 62,
     width: 320,
     color: '#434344',
     fontSize: 18,
@@ -42,11 +32,9 @@ const styles = StyleSheet.create({
     lineHeight: 26,
   },
   textInputWrapper: {
-    // flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    // height: 30,
     marginBottom: 20,
   },
   textInput: {
@@ -74,12 +62,10 @@ const styles = StyleSheet.create({
     borderColor: '#fff'
   },
   continueButton: {
-    // textDecorationLine: 'underline',
-    // textAlign: 'center',
-    // height: 56,
-    // width: 285,
-    // borderRadius: 32.5,
-    // backgroundColor: '#001871',
+    fontSize: 16,
+    fontWeight: 'bold',
+    letterSpacing: 0.5,
+    lineHeight: 16,
     color:'#fff',
     textAlign:'center',
   },
@@ -110,11 +96,6 @@ export default class LoginScreen extends React.Component {
           <TextInput style={styles.textInput} placeholder='First Name' />
           <TextInput style={styles.textInput} placeholder='Last Name' />
           <TextInput style={styles.textInput} placeholder='Date of Birth' />
-          {/* <TextInput2
-            text={this.state.dateOfBirth}
-            placeholderStyle={{ fontFamily: "AnotherFont", borderColor: 'red' }}
-            placeholderStyle={{ fontFamily: "AnotherFont", borderColor: 'red' }}
-          /> */}
         </View>
 
         <View style={styles.continueButtonWrapper}>
@@ -122,12 +103,8 @@ export default class LoginScreen extends React.Component {
             style={styles.continueButton}
             onPress={() => navigate('PlanFinder')}
           >
-            Continue
+            CONTINUE
           </Text>
-        </View>
-
-        <View style={styles.imageSection}>
-          {/* <Image source /> */}
         </View>
       </View >
     );
